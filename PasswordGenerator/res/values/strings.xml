@@ -7,5 +7,14 @@
     <string name="dummy_string">ABCDEFGH</string>
     <string name="btn_generator">Generate</string>
     <string name="btn_save">Save</string>
+    
+    <string name="label_password_length">Password Length</string>
+    <string name="label_password_category">Password Category</string>
+    
+    <string name="label_password_category_u">Uppercase characters(A through Z)</string>
+    <string name="label_password_category_l">Lowercase characters(a through z)</string>
+    <string name="label_password_category_d">Base 10 digits (0 through 9)</string>
+    <string name="label_password_category_non">Non-alphabetic characters</string>
+
 
 </resources>

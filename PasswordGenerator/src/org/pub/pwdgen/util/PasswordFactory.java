@@ -1,6 +1,9 @@
 package org.pub.pwdgen.util;
 
+import java.util.List;
 import java.util.Random;
+
+import org.pub.pwdgen.vo.PasswordPolicy;
 
 public class PasswordFactory {
 	
@@ -14,28 +17,20 @@ public class PasswordFactory {
 	
 	private static final String[] charset = new String[] {charactorUpper, charactorLower, numeric, nonAlphabetic};
 	
-	private int passwordLength;
+	private PasswordPolicy passwordPolicy;
 	
-	public void setPasswordLength(int passwordLength) {
-		this.passwordLength = passwordLength;
-	}
-
-	public PasswordFactory() {
-		setPasswordLength(8);
-	}
-	
-	public PasswordFactory(int passwordLength) {
-		setPasswordLength(passwordLength);
+	public PasswordFactory(PasswordPolicy passwordPolicy) {
+		this.passwordPolicy = passwordPolicy;
 	}
 	
 	public String generatePassword() {
-		int[] indexArray = randomCommon(0, 3, 3);
-		System.out.println(indexArray[0]+","+indexArray[1]+","+indexArray[2]);
+		List<Integer> categories = passwordPolicy.getPasswordCategory();
+		int[] indexArray = randomArray(toIntArray(categories));
 		
 		Random rand = new Random(System.currentTimeMillis());
 		StringBuffer sb = new StringBuffer();
 		int index = 0;
-		for (int i = 0; i < passwordLength; i++ ) {
+		for (int i = 0; i < passwordPolicy.getPasswordLength(); i++ ) {
 			if(index >= indexArray.length) {
 				index = 0;
 			}
@@ -46,26 +41,29 @@ public class PasswordFactory {
 		return sb.toString();
 	}
 	
-	public static int[] randomCommon(int min, int max, int n) {
-		int len = max - min + 1;
-		if (max < min || n > len) {
-			return null;
+	private int[] toIntArray(List<Integer> list) {
+		int[] ret = new int[list.size()];
+		int i = 0;
+		for (Integer item : list) {
+			ret[i++] = item.intValue();
 		}
-
-		int[] source = new int[len];
-		for (int i = min; i < min + len; i++) {
-			source[i - min] = i;
-		}
-
-		int[] result = new int[n];
-		Random rd = new Random();
-		int index = 0;
-		for (int i = 0; i < result.length; i++) {
-			index = Math.abs(rd.nextInt() % len--);
-			result[i] = source[index];
-			source[index] = source[len];
-		}
-		return result;
-	}	
-
+		return ret;
+	}
+	
+	private int[] randomArray(int[] arr) {
+		int[] arr2 = new int[arr.length];
+		int count = arr.length;
+		int cbRandCount = 0;
+		int cbPosition = 0;
+		int k = 0;
+		do {
+			Random rand = new Random();
+			int r = count - cbRandCount;
+			cbPosition = rand.nextInt(r);
+			arr2[k++] = arr[cbPosition];
+			cbRandCount++;
+			arr[cbPosition] = arr[r - 1];
+		} while (cbRandCount < count);
+		return arr2;
+	}
 }
