@@ -5,11 +5,11 @@ import java.util.List;
 
 import org.pub.pwdgen.util.PasswordFactory;
 import org.pub.pwdgen.util.PasswordRepository;
+import org.pub.pwdgen.util.PasswordRepositorySQL;
 import org.pub.pwdgen.vo.PasswordPolicy;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.os.Environment;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ArrayAdapter;
@@ -39,7 +39,8 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 				
-		passwordRepository = new PasswordRepository(Environment.getExternalStorageDirectory().getPath());
+		//passwordRepository = new PasswordRepositoryXML(Environment.getExternalStorageDirectory().getPath());
+		passwordRepository = new PasswordRepositorySQL(this);
 		
 		txtPassword = (TextView) findViewById(R.id.txtPassword);
 		addItemOnSpinner();

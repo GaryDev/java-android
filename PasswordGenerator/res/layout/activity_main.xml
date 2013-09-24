@@ -68,9 +68,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/cbxNonAlpha"
-        android:layout_below="@+id/txtPassword"
-        android:layout_marginLeft="33dp"
-        android:layout_marginTop="29dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="14dp"
         android:text="@string/btn_generator"
         android:textSize="20sp" />
 
@@ -80,7 +79,7 @@
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/btnGenerator"
         android:layout_alignBottom="@+id/btnGenerator"
-        android:layout_alignRight="@+id/cbxDigit"
+        android:layout_alignRight="@+id/cbxLower"
         android:text="@string/btn_save"
         android:textSize="20sp" />
 
@@ -88,9 +87,9 @@
         android:id="@+id/txtPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/cbxNonAlpha"
         android:layout_below="@+id/cbxNonAlpha"
-        android:layout_marginTop="17dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="26dp"
         android:text="@string/dummy_string"
         android:textSize="35sp" />
 

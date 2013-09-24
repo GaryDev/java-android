@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">PasswordGenerator</string>
+    <string name="app_name">密码管理器</string>
     <string name="action_settings">Settings</string>
-    <string name="hello_world">Hello world!</string>
-    <string name="dummy_string">ABCDEFGH</string>
+    <string name="dummy_string">ABCDEFGHIJKL</string>
     <string name="btn_generator">Generate</string>
     <string name="btn_save">Save</string>
     
