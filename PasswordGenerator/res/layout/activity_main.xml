@@ -23,7 +23,7 @@
         android:textColor="@color/color_lightblue" />
 
    	<ListView
-		android:id="@+id/list_option"
+		android:id="@+id/item_list"
 		android:layout_width="fill_parent"
 		android:layout_height="wrap_content" />
     

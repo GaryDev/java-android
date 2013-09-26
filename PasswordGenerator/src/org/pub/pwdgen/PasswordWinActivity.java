@@ -45,6 +45,7 @@ public class PasswordWinActivity extends Activity {
 		txtPassword = (TextView) findViewById(R.id.txtPassword);
 		addItemOnSpinner();
 		addListenerOnButton();
+		setDefaultValue();
 		loadCurrentPassword();		
 	}
 	
@@ -114,6 +115,12 @@ public class PasswordWinActivity extends Activity {
 				btnSave.setEnabled(false);
 			}
 		});
+	}
+	
+	private void setDefaultValue() {
+		cbxUpper.setChecked(true);
+		cbxLower.setChecked(true);
+		cbxDigit.setChecked(true);
 	}
 	
 	private void loadCurrentPassword() {
