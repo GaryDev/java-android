@@ -1,0 +1,51 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    tools:context=".MainActivity" >
+
+    <TextView
+        android:id="@+id/lblUserID"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:text="@string/label_id" />
+    
+    <EditText
+        android:id="@+id/txtUserID"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lblUserID"
+        android:inputType="text" />
+
+    <TextView
+        android:id="@+id/lblPwd"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtUserID"
+        android:text="@string/label_pwd" />
+    
+    <EditText
+        android:id="@+id/txtPwd"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lblPwd"
+        android:inputType="textPassword" />
+    
+    <Button 
+        android:id="@+id/btnLogin"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtPwd"
+        android:text="@string/button_login"
+        />
+    
+    <TextView
+        android:id="@+id/lblInfo"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:text="@string/label_none" />
+    
+</RelativeLayout>

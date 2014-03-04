@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">WCFApp</string>
+    <string name="button_login">Login</string>
+    <string name="label_id">Usercode: </string>
+    <string name="label_none">None</string>
+    <string name="label_pwd">Password: </string>
+
+</resources>
