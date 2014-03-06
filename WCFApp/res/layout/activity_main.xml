@@ -3,49 +3,47 @@
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     tools:context=".MainActivity" >
-
-    <TextView
-        android:id="@+id/lblUserID"
+    
+    <LinearLayout 
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:text="@string/label_id" />
+    	android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="10dip">
+    
+    <ImageView 
+        android:id="@+id/app_icon"
+        android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:layout_marginTop="50dip"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/icon"
+        />
     
     <EditText
         android:id="@+id/txtUserID"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/lblUserID"
-        android:inputType="text" />
-
-    <TextView
-        android:id="@+id/lblPwd"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/txtUserID"
-        android:text="@string/label_pwd" />
+        android:inputType="text"
+        android:hint="@string/label_id" />
     
     <EditText
         android:id="@+id/txtPwd"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/lblPwd"
-        android:inputType="textPassword" />
+        android:inputType="textPassword"
+        android:hint="@string/label_pwd" />
     
     <Button 
         android:id="@+id/btnLogin"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/txtPwd"
         android:text="@string/button_login"
         />
+    </LinearLayout>
     
-    <TextView
-        android:id="@+id/lblInfo"
+    <TextView 
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:layout_alignParentBottom="true"
-        android:text="@string/label_none" />
+    	android:layout_height="wrap_content"
+        android:visibility="invisible" />
     
 </RelativeLayout>

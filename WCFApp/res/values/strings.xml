@@ -1,10 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <color name="blue">#0000FF</color>
+    
     <string name="app_name">WCFApp</string>
+    
     <string name="button_login">Login</string>
-    <string name="label_id">Usercode: </string>
+    <string name="button_back">Back</string>
+    <string name="button_logout">Logout</string>
+    
+    <string name="label_id">UserCode</string>
     <string name="label_none">None</string>
-    <string name="label_pwd">Password: </string>
+    <string name="label_pwd">Password</string>
+    
+    <string name="menu_home">Home</string>
+    <string name="menu_news">News</string>
+    <string name="menu_info">Info</string>
+    <string name="menu_search">Search</string>
+    <string name="menu_more">More</string>
 
 </resources>
